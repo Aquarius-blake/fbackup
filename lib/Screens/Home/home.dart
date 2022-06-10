@@ -42,9 +42,17 @@ class _HomeState extends State<Home> {
                 DrawerHeader(
                     child: Column(
                       children: <Widget>[
-                        CircleAvatar(
-                          radius: 60.0,
-                          backgroundImage: AssetImage('Assets/hac.jpg'),
+                        Stack(
+                          children:[ CircleAvatar(
+                            radius: 60.0,
+                            backgroundImage: AssetImage('Assets/hac.jpg'),
+                          ),
+                            Positioned(
+                                child: IconButton(onPressed: (){},
+                                icon:Icon( Icons.add_a_photo)
+                ),
+                            )
+                          ]
                         ),
                         Center(
 
