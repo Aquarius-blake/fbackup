@@ -5,9 +5,21 @@ class Upload{
 
   final FirebaseFirestore _firestore=FirebaseFirestore.instance;
 
-  Future <void> uploadpic(ImageSource source)async {
+  void pic()async{
+    await uploadpic(ImageSource.gallery);
+  }
+
+
+  Future  uploadpic(ImageSource source)async {
     final ImagePicker _imagepicker= ImagePicker();
     XFile? file=await _imagepicker.pickImage(source: source);
+
+    if(file != null){
+      return  file.readAsBytes();
+
+    }else{
+
+    }
   }
 
 
