@@ -1,4 +1,5 @@
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../Models/Users1.dart';
 
@@ -7,6 +8,7 @@ class AuthService{
 //Initialization
   final FirebaseAuth _auth = FirebaseAuth.instance;
   bool guest=false;
+  final FirebaseFirestore _firestore=FirebaseFirestore.instance;
 
 
 
