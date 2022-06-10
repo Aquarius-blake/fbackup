@@ -9,6 +9,7 @@ class Upload{
 
 
 
+
   Future  uploadpic(ImageSource source)async {
     final ImagePicker _imagepicker= ImagePicker();
     XFile? file=await _imagepicker.pickImage(source: source);
