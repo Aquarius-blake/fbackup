@@ -43,21 +43,22 @@ class _HomeState extends State<Home> {
                     child: Column(
                       children: <Widget>[
                         Stack(
-                          children:[ CircleAvatar(
-                            radius: 60.0,
-                            backgroundImage: AssetImage('Assets/hac.jpg'),
-                          ),
-                            Positioned(
-                              bottom: -5,
+                            children:[ CircleAvatar(
+                              radius: 60.0,
+                              backgroundImage: AssetImage('Assets/hac.jpg'),
+                            ),
+                              Positioned(
+                                bottom: -5,
                                 left: 65,
-                                child: IconButton(onPressed: (){},
-                                icon:Icon(
-                                    Icons.add_a_photo,
-                                  color: Colors.white,
-                                )
-                ),
-                            )
-                          ]
+                                child: IconButton(
+                                    onPressed: (){},
+                                    icon:Icon(
+                                      Icons.add_a_photo,
+                                      color: Colors.white,
+                                    )
+                                ),
+                              )
+                            ]
                         ),
                         Center(
 
