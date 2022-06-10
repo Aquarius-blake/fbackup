@@ -27,12 +27,8 @@ class _SinginState extends State<Singin> {
       appBar: AppBar(
         backgroundColor: Colors.lightBlue,
         elevation: 2.0,
-        title: Row(
-          children:<Widget> [
-            Center(
-                child: Text("Sign In")
-            )
-          ],
+        title: Center(
+            child: Text("Sign In")
         ),
       ),
       body: Padding(
