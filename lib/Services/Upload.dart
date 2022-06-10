@@ -1,13 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:flutter/material.dart';
 
 class Upload{
 
   final FirebaseFirestore _firestore=FirebaseFirestore.instance;
 
-  void pic()async{
-    await uploadpic(ImageSource.gallery);
-  }
+
 
 
   Future  uploadpic(ImageSource source)async {

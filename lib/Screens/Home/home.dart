@@ -1,6 +1,9 @@
 
+
+
 import 'package:flutter/material.dart';
 import 'package:forum3/Services/Upload.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:line_icons/line_icons.dart';
 import '../../Services/auth.dart';
 
@@ -14,6 +17,14 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   final  AuthService _auth=AuthService();
   final Upload _upload=Upload();
+  dynamic image;
+  void pic()async{
+   image= await _upload.uploadpic(ImageSource.gallery);
+setState(() {
+
+});
+  }
+
   @override
 
 
@@ -45,16 +56,20 @@ class _HomeState extends State<Home> {
                     child: Column(
                       children: <Widget>[
                         Stack(
-                            children:[ CircleAvatar(
+                            children:[
+                              image!=null? CircleAvatar(
                               radius: 60.0,
-                              backgroundImage: AssetImage('Assets/hac.jpg'),
-                            ),
+                              backgroundImage: MemoryImage(image),
+                            ):CircleAvatar(
+                                radius: 60.0,
+                                backgroundImage: AssetImage('Assets/hac.jpg'),
+                              ),
                               Positioned(
                                 bottom: -5,
                                 left: 65,
                                 child: IconButton(
                                     onPressed:() {
-                                      _upload.uploadpic();
+                                      pic();
                                       },
                                     icon:Icon(
                                       Icons.add_a_photo,
