@@ -49,7 +49,7 @@ class _HomeState extends State<Home> {
                           ),
                             Positioned(
                               bottom: -10,
-                                left: 80,
+                                left: 75,
                                 child: IconButton(onPressed: (){},
                                 icon:Icon( Icons.add_a_photo)
                 ),
