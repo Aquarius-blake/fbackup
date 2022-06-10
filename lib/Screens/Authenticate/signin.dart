@@ -29,9 +29,8 @@ class _SinginState extends State<Singin> {
         elevation: 2.0,
         title: Row(
           children:<Widget> [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(130.0,0,0,0),
-              child:   Text("Sign In"),
+            Center(
+                child: Text("Sign In")
             )
           ],
         ),
