@@ -48,8 +48,8 @@ class _HomeState extends State<Home> {
                             backgroundImage: AssetImage('Assets/hac.jpg'),
                           ),
                             Positioned(
-                              bottom: -10,
-                                left: 75,
+                              bottom: -5,
+                                left: 65,
                                 child: IconButton(onPressed: (){},
                                 icon:Icon( Icons.add_a_photo)
                 ),
