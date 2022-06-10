@@ -70,10 +70,16 @@ class AuthService{
 
 
   //Register as new User with email and password
-  Future RegisterNewUserEmail(String email,String password,String Name,String Username,String Gender)async{
+  Future RegisterNewUserEmail(String email,String password,String name,String username,String gender)async{
     try{
       UserCredential result= await _auth.createUserWithEmailAndPassword(email: email, password: password);
       User? user = result.user;
+      _firestore.collection("users").doc(user!.uid).set({
+        "Username":username,
+        "Full Name":name,
+        "Gender":gender,
+      }
+      );
       return _userfirebase(user);
     }
     catch(e){
