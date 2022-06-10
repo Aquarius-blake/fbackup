@@ -53,7 +53,9 @@ class _HomeState extends State<Home> {
                                 bottom: -5,
                                 left: 65,
                                 child: IconButton(
-                                    onPressed: (){},
+                                    onPressed:() {
+                                      _upload.uploadpic();
+                                      },
                                     icon:Icon(
                                       Icons.add_a_photo,
                                       color: Colors.white,
