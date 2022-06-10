@@ -257,7 +257,7 @@ class _RegisterState extends State<Register> {
                                 onPressed: () async {
                                   if(_formKey.currentState?.validate()!=null){
                                     print(email);
-                                    dynamic result=await _auth.RegisterNewUserEmail(email, password);
+                                    dynamic result=await _auth.RegisterNewUserEmail(email, password,Fnmae,Username,Gender);
                                     if (result==null){
                                       setState(() {
                                         error="Registeration Failed";
