@@ -4,7 +4,9 @@ class Upload{
 
   final FirebaseFirestore _firestore=FirebaseFirestore.instance;
 
+void uploadpic(){
 
+}
 
 
  }
