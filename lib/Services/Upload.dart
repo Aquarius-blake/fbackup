@@ -4,7 +4,7 @@ class Upload{
 
   final FirebaseFirestore _firestore=FirebaseFirestore.instance;
 
-void uploadpic(){
+Future <void> uploadpic()async {
 
 }
 
